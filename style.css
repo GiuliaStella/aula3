@@ -1,0 +1,28 @@
+body {
+   font-family: Arial, sans-serif;
+   background-color: #fce4ec;  /*fundo da pagina */
+   padding: 20px;
+}
+/* cria a container para parecer um papel */
+.container {
+   background-color: white; 
+   max-width: 700px;
+   margin: 0 auto; /* deixa a folha no centro */
+   padding: 40px;   /* espaco de dentro p texto nao colarna borda */
+   border: 1px solid #ddd;
+}
+h1 {
+   background-color: rgb(178, 109, 235);
+   color: white;
+   padding: 10px;
+   text-align: center;
+}
+h2 {
+   background-color: rgb(236, 101, 196);
+   color: white;
+   padding: 5px;
+   font-size: 1.2em;
+}
+a {
+   color: white;
+}
