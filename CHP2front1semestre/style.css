@@ -1,0 +1,587 @@
+/* deixa as cores e font salvadas para facilitar na hora de pegar e nn precisar ficar copiando e colando*/
+:root {
+    /* Variáveis de cores para usar no projeto todo */
+    --black: #000000;
+    --body: rgb(0, 0, 0);
+    --dark: rgb(0, 0, 0);
+    --grad-text: linear-gradient(90deg, rgb(147, 96, 230), rgb(76, 43, 209), rgb(34, 3, 100));
+    --retangulo-blue: rgb(54, 20, 81);
+    --white: #ffffff;
+    --gray: #939393;
+    --azul: rgb(148, 56, 190);
+    --cards: #21262d;
+    /* Tempo da animação de transição */
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --font: sans-serif;
+    /* variáveis usadas no modo escuro/claro */
+    --bg: #000000;
+    --texto: #939393;
+    --card-bg: #21262d;
+    --card-borda: #30363d;
+    --tabela-head: rgb(54, 20, 81);
+    --tabela-linha: #21262d;
+    --formulario-cor: #d5c8c8;
+    --input-bg: #f0f4f8;
+    --footer-bg: #0a0a0a;
+    --header: rgba(110, 10, 153, 0.85);
+    --tabela-hover: #2d2d2d;
+}
+
+/* ── MODO claro via checkbox ── */
+#dm {
+    display: none;
+}
+
+/* quando o checkbox está marcado, altera as variáveis para modo escuro */
+#dm:checked~* {
+    --bg: #f5f0ff;
+    --body: #f5f0ff;
+    --white: #7f0f6c;
+    --gray: #fcfafa;
+    --cards: #714ba8;
+    --card-bg: #795ba3;
+    --card-borda: #c9a8f0;
+    --azul: rgb(100, 20, 150);
+    --tabela-head: #4a0080;
+    --tabela-linha: #f0e8ff;
+    --formulario-bg: #fff;
+    --formulario-cor: #d5cbcb;
+    --input-bg: #f5f0ff;
+    --footer-bg: #e8d8ff;
+    --header: rgba(199, 132, 228, 0.85);
+    --tabela-hover: #e0d0f5;
+}
+
+
+/* Reset básico para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Configuração do topo do site */
+header {
+    position: fixed;
+    /* Fixa o menu no topo mesmo ao rolar */
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--header);
+    backdrop-filter: blur(12px);
+    /* Efeito de desfoque no fundo */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 100;
+    padding: 0 40px;
+    justify-content: space-between;
+}
+
+/* Container do conteúdo dentro do header */
+.conjunto-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 70px;
+}
+
+/* Estilo do texto da logo */
+.logo {
+    font-family: var(--font);
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--white);
+}
+
+/* Alinhamento dos itens do menu */
+.menu-index {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    align-items: center;
+}
+
+/* Links dentro do menu */
+.menu-index a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.2s;
+}
+
+.menu-index a:hover {
+    color: var(--white);
+}
+
+label[for=dm] {
+    cursor: pointer;
+    font-size: .78rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    padding: .3rem .8rem;
+    color: #fff;
+    transition: all .2s;
+    white-space: nowrap;
+}
+
+label[for=dm]:hover {
+    background: var(--azul);
+    color: #fff;
+}
+
+/* --- CONFIGURAÇÕES DO CORPO --- */
+body {
+    background-color: var(--bg);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* --- SEÇÃO HERO (O INÍCIO DO CONTEÚDO) --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 40px;
+    min-height: 100vh;
+}
+
+/* Bloco de texto da seção hero */
+.hero-conteudo {
+    flex: 1;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Selo de "Novo" ou categoria */
+.hero-novo {
+    color: var(--azul);
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero h2 {
+    text-align: left;
+    font-size: 2.8rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.hero h2 span {
+    color: var(--azul);
+}
+
+
+.hero-testo {
+    font-size: 1.1rem;
+    color: var(--gray);
+    margin-bottom: 25px;
+}
+
+/* Bloco da imagem da seção hero */
+.hero-foto {
+    max-width: 400px;
+    padding-right: 100px;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-foto {
+    width: 450px;
+    height: auto;
+    border-radius: 12px;
+    filter: drop-shadow(0 0 15px rgba(140, 70, 148, 0.503));
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-foto figure img,
+.riscos-foto figure img {
+    width: 450px;
+    height: auto;
+    border-radius: 12px;
+    filter: drop-shadow(0 0 20px rgba(157, 99, 164, 0.64));
+}
+
+figcaption {
+    font-size: 0.8rem;
+    color: var(--gray);
+    text-align: center;
+    font-style: italic;
+}
+
+h2 {
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/*exemplos*/
+.exemplos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 28px;
+    border-radius: 12px;
+    border: 1px solid var(--card-borda);
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+    border-color: var(--azul);
+    transform: translateY(-3px);
+}
+
+.card-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    color: var(--azul);
+    font-size: 1.1rem;
+}
+
+.card p {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* tabela comparativa */
+.comparativo {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    min-height: 60vh;
+}
+
+.comparativo h2 {
+    margin-bottom: 30px;
+}
+
+.tabela-wrap {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid var(--card-borda);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: var(--tabela-head);
+}
+
+thead th {
+    color: #fff;
+    padding: 14px 20px;
+    text-align: left;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--card-borda);
+    background: var(--tabela-linha);
+    transition: background 0.15s;
+}
+tbody tr:hover {
+    background: var(--tabela-hover);
+}
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+
+td {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+td:first-child {
+    font-weight: 700;
+    color: var(--white);
+    width: 130px;
+}
+
+.positivo {
+    color: #4caf85;
+    font-weight: 500;
+}
+
+.negativo {
+    color: #e05c5c;
+    font-weight: 500;
+}
+
+
+/*  riscos*/
+.riscos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 40px;
+    min-height: 100vh;
+}
+
+.riscos-foto {
+    max-width: 400px;
+    padding-right: 100px;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.riscos-conteudo {
+    flex: 1;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.riscos h2 {
+    text-align: left;
+    font-size: 2.8rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.riscos-testo {
+    font-size: 1.1rem;
+    color: var(--gray);
+    margin-bottom: 25px;
+}
+
+/* como usar */
+.como {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 40px;
+    min-height: 100vh;
+}
+
+.como-conteudo {
+    flex: 1;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.como h2 {
+    text-align: left;
+    font-size: 2.8rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.como-texto {
+    font-size: 1.1rem;
+    color: var(--gray);
+    margin-bottom: 25px;
+}
+
+.como-texto span {
+    color: var(--azul);
+    display: block;
+    margin-top: 10px;
+}
+
+/* lista ordenada com os passos */
+.passos {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.passos li {
+    color: var(--gray);
+    font-size: 20px;
+    line-height: 2.0;
+    padding-left: 8px;
+}
+
+.passos li::marker {
+    color: var(--azul);
+    font-weight: bold;
+}
+
+/* formulario */
+.formulario {
+    background-color: var(--card-bg);
+    color: var(--formulario-cor);
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    min-height: 400px;
+    box-shadow: 0 10px 25px rgba(135, 12, 184, 0.3);
+    margin: 0 auto;
+}
+
+.formulario h1 {
+    color: var(--azul);
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+/* Estilo dos campos do formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: var(--input-bg);
+    font-size: 1rem;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--azul);
+}
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--azul);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.15s;
+    margin-top: 10px;
+}
+.btn-submit:hover {
+    background-color: rgb(100, 20, 150);
+    transform: translateY(-6px);
+}
+ 
+.btn-submit:active {
+    transform: none;
+}
+
+footer {
+    background: var(--footer-bg);
+    border-top: 1px solid var(--card-borda);
+    padding: 2rem 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--gray);
+}
+ 
+footer strong {
+    color: var(--white);
+}
+ 
+/* ── RESPONSIVO ── */
+@media (max-width: 768px) {
+    .menu-index { display: none; }
+ 
+    .hero,
+    .riscos,
+    .como {
+        flex-direction: column;
+        padding: 100px 20px 60px;
+        gap: 30px;
+    }
+ 
+    .hero-foto,
+    .riscos-foto {
+        padding-right: 0;
+        max-width: 100%;
+    }
+ 
+    .hero-foto figure img,
+    .riscos-foto figure img {
+        width: 100%;
+    }
+ 
+    .cards {
+        grid-template-columns: 1fr;
+    }
+ 
+    .formulario {
+        width: 100%;
+    }
+ 
+    .comparativo {
+        padding: 60px 20px;
+    }
+ 
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}

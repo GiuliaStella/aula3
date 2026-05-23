@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- titulo da aba -->
+    <title>Site uso IA CHP2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- modo claro com CSS puro via checkbox + :checked  -->
+    <input type="checkbox" id="dm" />
+    <div class="site">
+        <!-- navegacao da pagina da parte superior -->
+        <header>
+            <div class="conjunto-header">
+                <h1 class="logo">IA Responsavel</h1>
+                <nav> <!-- Links de navegação ancorados (levam para partes da mesma página) -->
+                    <ul class="menu-index">
+                        <li><a href="#hero">O Que é?</a></li>
+                        <li><a href="#exemplos">Exemplos de Uso</a></li>
+                        <li><a href="#riscos">Riscos e Cuidados</a></li>
+                        <li><a href="#como">Como Usar</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <label for="dm">Modo Claro</label>
+                    </ul>
+                    
+                </nav>
+            </div>
+        </header>
+        <main>
+            <!-- Seção de destaque (Hero) com texto e imagem principal -->
+            <section class="hero" id="hero">
+                <div class="hero-conteudo">
+                    <p class="hero-novo">Inteligencia Artificial</p>
+                    <h2>A Tecnologia que Está Transformando<br><span>o Mundo</span></h2>
+                    <p class="hero-testo">A Inteligência Artificial (IA) é uma tecnologia capaz de simular habilidades
+                        humanas, como aprender, analisar informações, reconhecer padrões, tomar decisões e até criar
+                        conteúdos.
+                        Ela funciona por meio de algoritmos e grandes volumes de dados, permitindo que máquinas executem
+                        tarefas de forma rápida e eficiente. Atualmente, a IA está presente em diversas áreas do nosso
+                        dia a
+                        dia,
+                        desde aplicativos de celular até sistemas avançados usados em empresas, hospitais e instituições
+                        de
+                        ensino.</p>
+                </div>
+                <div class="hero-foto">
+                    <figure>
+                        <img src="./assets/ia.png" alt="Ilustração de Inteligência Artificial">
+                        <figcaption>Representação visual de uma IA moderna</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="exemplos" id="exemplos">
+                <h2>Exemplos atuais de uso de IA</h2>
+
+                <div class="cards">
+
+                    <!-- Card 1: Chatbots e Atendimento Virtual -->
+                    <article class="card">
+                        <div class="card-cabecalho">
+                            <h3>Chatbots e Atendimento Virtual</h3>
+                        </div>
+                        <p>Os chatbots utilizam Inteligência Artificial para responder perguntas,
+                            oferecer suporte ao cliente e automatizar atendimentos em sites, aplicativos
+                            e redes sociais de forma rápida e eficiente.</p>
+                    </article>
+                    <!-- Card 2: Diagnósticos Médicos -->
+                    <article class="card">
+                        <div class="card-cabecalho">
+                            <h3>Diagnósticos Médicos</h3>
+                        </div>
+                        <p>Na área da saúde, a IA ajuda médicos a analisar exames, identificar doenças
+                            com mais precisão e auxiliar na criação de tratamentos personalizados
+                            para pacientes.</p>
+                    </article>
+                    <!-- Card 3: Reconhecimento Facial -->
+                    <article class="card">
+                        <div class="card-cabecalho">
+                            <h3>Reconhecimento Facial</h3>
+                        </div>
+                        <p>A tecnologia de reconhecimento facial é usada em celulares, sistemas de segurança,
+                            bancos e controles de acesso para identificar pessoas de maneira rápida e segura.</p>
+                    </article>
+                    <!-- Card 4: Recomendação de Conteúdo -->
+                    <article class="card">
+                        <div class="card-cabecalho">
+                            <h3>Recomendação de Conteúdo</h3>
+                        </div>
+                        <p>Plataformas de streaming e redes sociais utilizam IA para sugerir filmes, músicas,
+                            vídeos e conteúdos com base nos interesses e comportamentos dos usuários.</p>
+                    </article>
+                </div>
+            </section>
+            <!-- comparativo -->
+            <section class="comparativo" id="comparativo">
+                <h2>Lados Positivos e Negativos da IA</h2>
+                <div class="tabela-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Área</th>
+                                <th> Uso Positivo</th>
+                                <th> Uso Negativo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Saúde</td>
+                                <td class="positivo">Diagnóstico precoce de doenças</td>
+                                <td class="negativo">Erros por dados tendenciosos</td>
+                            </tr>
+                            <tr>
+                                <td>Segurança</td>
+                                <td class="positivo">Detecção de fraudes em tempo real</td>
+                                <td class="negativo">Vigilância em massa sem consentimento</td>
+                            </tr>
+                            <tr>
+                                <td>Educação</td>
+                                <td class="positivo">Tutores personalizados para alunos</td>
+                                <td class="negativo">Plágio e desonestidade acadêmica</td>
+                            </tr>
+                            <tr>
+                                <td>Trabalho</td>
+                                <td class="positivo">Automação de tarefas repetitivas</td>
+                                <td class="negativo">Substituição de empregos sem requalificação</td>
+                            </tr>
+                            <tr>
+                                <td>Comunicação</td>
+                                <td class="positivo">Tradução instantânea entre idiomas</td>
+                                <td class="negativo">Criação de deepfakes e desinformação</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="riscos" id="riscos">
+
+                <div class="riscos-foto">
+                    <figure>
+                        <img src="./assets/riscos.jpg" alt="Imagem sobre riscos da IA">
+                        <figcaption>Os riscos éticos da IA exigem atenção constante</figcaption>
+                    </figure>
+                </div>
+
+                <div class="riscos-conteudo">
+                    <h2>Riscos e cuidados éticos no uso de IA</h2>
+                    <p class="riscos-testo">Apesar dos benefícios, o uso da Inteligência Artificial também exige atenção
+                        e
+                        responsabilidade.
+                        Um dos principais riscos está relacionado à privacidade e ao uso inadequado de dados pessoais.
+                        Também existem preocupações
+                        com decisões automatizadas injustas, disseminação de informações falsas e uso da IA para
+                        manipulação
+                        de conteúdos, como imagens
+                        e vídeos falsificados. Por isso, é fundamental que empresas e usuários utilizem a tecnologia de
+                        forma ética,
+                        transparente e respeitando os direitos das pessoas.</p>
+                </div>
+            </section>
+            <section class="como" id="como">
+                <div class="como-conteudo">
+                    <h2>Como usar IA de forma segura e responsável</h2>
+                    <ol class="passos">
+                        <li>Verifique a confiabilidade das informações geradas pela IA antes de usar ou
+                            compartilhar.
+                        </li>
+                        <li>Proteja seus dados pessoais e evite compartilhá-los em plataformas desconhecidas.</li>
+                        <li>Seja transparente ao usar IA em trabalhos ou projetos, informando quando o conteúdo foi
+                            gerado.</li>
+                        <li>Respeite a privacidade das outras pessoas ao utilizar ferramentas de IA.</li>
+                        <li>Tenha pensamento crítico e não aceite respostas da IA como verdade absoluta.</li>
+                        <li>Apoie empresas e serviços que adotam práticas éticas no desenvolvimento de IA.</li>
+                        <li>Mantenha-se informado sobre regulamentações e debates sobre ética em IA.</li>
+                    </ol>
+                </div>
+
+            </section>
+            <section class="contato" id="contato">
+                <div class="formulario">
+
+                    <form id="Form">
+                        <h1>Deixe sua opinião</h1>
+                        <div class="form-group">
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" placeholder="seuemail@provedor.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sugestao">Alguma Sugestão:</label>
+                            <textarea id="sugestao" name="sugestao" placeholder="Escreva aqui o que você pensa..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </section>
+    </main>
+
+    <footer>
+        <span><strong>IA Responsável</strong> &mdash; Checkpoint 3, Front-End</span>
+        <span>Tecnologia &amp; Ética &mdash; 1&ordm; Semestre</span>
+    </footer>
+
+   </div>
+</body>
+</html>
