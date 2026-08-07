@@ -1,28 +1,14 @@
-body {
-   font-family: Arial, sans-serif;
-   background-color: #fce4ec;  /*fundo da pagina */
-   padding: 20px;
+/* importacao do css do bootstrap instalado via NPM */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+/* estilos custumizados da aplicaqcao */
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-/* cria a container para parecer um papel */
-.container {
-   background-color: white; 
-   max-width: 700px;
-   margin: 0 auto; /* deixa a folha no centro */
-   padding: 40px;   /* espaco de dentro p texto nao colarna borda */
-   border: 1px solid #ddd;
+.card{
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-h1 {
-   background-color: rgb(178, 109, 235);
-   color: white;
-   padding: 10px;
-   text-align: center;
-}
-h2 {
-   background-color: rgb(236, 101, 196);
-   color: white;
-   padding: 5px;
-   font-size: 1.2em;
-}
-a {
-   color: white;
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
