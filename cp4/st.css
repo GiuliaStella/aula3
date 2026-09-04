@@ -1,0 +1,255 @@
+/* deixa as cores e font salvadas para facilitar na hora de pegar e nn precisar ficar copiando e colando*/
+:root {
+    /* Variáveis de cores para usar no projeto todo */
+    --black: #000000;
+    --body: #07070a;
+    --dark: #131313;
+    --vinho: #250e05;
+    --vermelho: #2c1205;
+    --grad-text: linear-gradient(90deg, #6d3820, #884a21f6, #3d2407);
+    --white: #ffffff;
+    --gray: #939393;
+    /* Tempo da animação de transição */
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --font: sans-serif;
+}
+
+/* Configuração do topo do site */
+header {
+    position: fixed;
+    /* Fixa o menu no topo mesmo ao rolar */
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--black);
+    backdrop-filter: blur(12px);
+    /* Efeito de desfoque no fundo */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 100;
+    padding: 0 40px;
+    justify-content: space-between;
+}
+
+/* Container do conteúdo dentro do header */
+.conjunto-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 100;
+    height: 70px;
+}
+
+/* Estilo do texto da logo */
+.logo {
+    font-family: "Lobster Two";
+    font-size: 3rem;
+    font-weight: 900;
+    padding-left: 60px;
+    background: var(--grad-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Alinhamento dos itens do menu */
+.menu-index {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    align-items: center;
+
+}
+
+/* Links dentro do menu */
+.menu-index a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.2s;
+}
+
+.menu-index a:hover {
+    color: var(--white);
+}
+
+/* CONFIGURAÇÕES DO CORPO */
+body {
+    background-color: var(--body);
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+/* Reset básico para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* SEÇÃO HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 40px;
+    min-height: 100vh;
+}
+
+/* Bloco de texto da seção hero */
+.hero-conteudo {
+    flex: 1;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.hero h2 {
+    text-align: left;
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.hero-texto {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 25px;
+}
+
+
+/* Bloco da imagem da seção hero */
+.hero-foto {
+    max-width: 400px;
+    padding-right: 100px;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-foto img {
+    width: 250px;
+    height: auto;
+    border-radius: 12px;
+    filter: drop-shadow(0 0 20px rgba(66, 0, 0, 0.64));
+}
+h2 {
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* CONTATO */
+#contato {
+    padding: 70px 20px;
+    text-align: center;
+    background: var(--vinho);
+    border-top: 1px solid #30363d;
+}
+
+#contato h2 {
+    color: var(--white);
+}
+.contato-container {
+    flex: 1;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 15px;
+}
+.product-img{
+    
+
+}
+/* FOOTER  */
+footer {
+    background: #010409;
+    color: var(--white);
+    padding: 50px 20px 20px;
+    border-top: 1px solid #30363d;
+}
+
+/* Alinhamento dos blocos de informação no rodapé */
+.footerconteudo {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info h3 {
+    color: var(--white);
+    margin-bottom: 8px;
+}
+
+.info p {
+    color: var(--gray);
+    font-size: 0.85rem;
+}
+
+.footer-links h4,
+.redes h4 {
+    color: var(--white);
+    margin-bottom: 12px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 6px;
+}
+
+.footer-links a {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.footer-links a:hover {
+    color: var(--azul);
+}
+
+.redes span {
+    color: var(--gray);
+    font-size: 0.85rem;
+}
+
+/* Linha de direitos autorais no final de tudo */
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid #30363d;
+    padding-top: 20px;
+    font-size: 0.78rem;
+    color: var(--gray);
+}
+
+/* Links das redes sociais no rodapé */
+.redes a {
+    text-decoration: none;
+    color: var(--gray);
+    transition: 0.3s;
+}
+
+/* Efeito de destaque nas redes sociais */
+.redes a:hover {
+    color: var(--azul) !important;
+}
+
+.redes a:hover span {
+    color: var(--azul);
+}
